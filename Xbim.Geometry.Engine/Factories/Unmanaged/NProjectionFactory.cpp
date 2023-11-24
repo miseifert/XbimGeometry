@@ -91,7 +91,7 @@ void NProjectionFactory::FindOuterLoops(BRepMesh_VertexInspector& anInspector, s
 {
 
 	if (arcs.size() == 0) return;
-	const double twoPi = std::_Pi * 2;
+	const double twoPi = std::_Pi_val * 2;
 
 
 	//start at the lowest, leftist point and proceed anticlockwise around the perimeter
@@ -239,7 +239,7 @@ void NProjectionFactory::FindOuterLoops(BRepMesh_VertexInspector& anInspector, s
 void NProjectionFactory::CreateFootPrint(const TopoDS_Shape& shape, double linearDeflection, double angularDeflection, double tolerance, NFootprint& footprint, bool useHlrPolyAlgo)
 {
 
-	const double halfPi = std::_Pi / 2;
+	const double halfPi = std::_Pi_val / 2;
 	//find the bounds
 	Bnd_Box box;
 
@@ -656,7 +656,7 @@ int NProjectionFactory::FindNextNearestOuterPoint(int currentPointIndex, int pre
 	const std::map<int, std::set<int>>& arcs)
 {
 
-	double twoPi = std::_Pi * 2;
+	double twoPi = std::_Pi_val * 2;
 	double minAngle = twoPi;
 	double minDistance = 10000;
 	int nextOuterPoint = 0;
