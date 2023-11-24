@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>psifcwexbim</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xbim.Geometry.Dependencies\Xbim.Geometry.Dependencies.csproj" />
+    <ProjectReference Include="..\Xbim.Geometry.Engine.Interop\Xbim.Geometry.Engine.Interop.csproj" />
+    <ProjectReference Include="..\Xbim.ModelGeometry.Scene\Xbim.ModelGeometry.Scene.csproj" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+	  <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+	  <PackageReference Include="Xbim.Geometry.Abstractions" Version="6.2.344-develop" />
+  </ItemGroup>
+
+</Project>
