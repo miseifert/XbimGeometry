@@ -39,7 +39,7 @@ namespace ConsoleApp1
             using (var fs = new FileStream(target, FileMode.Create))
             using (var fs2 = new FileStream(Path.ChangeExtension(target, ".new.ifc"), FileMode.Create))
             using (var bw = new BinaryWriter(fs))
-            using (var ret = IfcStore.Open(source, null, 0))
+            using (var ret = IfcStore.Open(source, null, ifcDatabaseSizeThreshHold: -1))
             {
                 var model = ret.Model;
                 var loggerFactory = NullLoggerFactory.Instance;
@@ -56,7 +56,8 @@ namespace ConsoleApp1
                 //
                 //var context = new Xbim3DModelContext(ret, null);
                 //context.CreateContext();
-                //ret.SaveAs(xbimFileName, Xbim.IO.StorageType.Xbim);
+                var xbimFileName = Path.ChangeExtension(target, ".xbim");
+                ret.SaveAs(xbimFileName, Xbim.IO.StorageType.Xbim);
                 ret.Close();
             }
         }
