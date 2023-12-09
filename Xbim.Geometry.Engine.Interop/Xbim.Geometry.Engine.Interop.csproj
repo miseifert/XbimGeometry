@@ -1,9 +1,9 @@
 ﻿<Project DefaultTargets="Build" Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>net472;net6.0</TargetFrameworks>
+		<TargetFrameworks>net472;net8.0</TargetFrameworks>
 		<Title>Xbim Geometry Engine</Title>
 		<Description>Provides support for the Ifc4 and Ifc2x3 Geometry conversion.</Description>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<PackageId>Xbim.Geometry.Engine.Interop</PackageId>
 	</PropertyGroup>
 
@@ -37,13 +37,13 @@
 		</ItemGroup>
 	</Target>
 
-	<Target Name="GetNativeOccFiles" Condition="'$(TargetFramework)'=='net6.0'">
+	<Target Name="GetNativeOccFiles" Condition="'$(TargetFramework)'=='net8.0'">
 		<!--only need one version net 6.0 is random choice, they are all the same-->
 		<ItemGroup>
-			<Occ64Files Include="$(GeometryEnginePath)net6.0\win10-x64\TK*.dll">
+			<Occ64Files Include="$(GeometryEnginePath)net8.0\win10-x64\TK*.dll">
 				<WinPlatform>runtimes/win10-x64/native</WinPlatform>
 			</Occ64Files>
-			<Occ86Files Include="$(GeometryEnginePath)net6.0\win10-x86\TK*.dll">
+			<Occ86Files Include="$(GeometryEnginePath)net8.0\win10-x86\TK*.dll">
 				<WinPlatform>runtimes/win10-x86/native</WinPlatform>
 			</Occ86Files>
 			<OccPackageFile Include="@(Occ64Files);@(Occ86Files)">
@@ -113,7 +113,7 @@
 	</ItemGroup>
 
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0' ">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0' ">
     <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
   </ItemGroup>
 
