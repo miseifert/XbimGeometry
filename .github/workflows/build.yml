@@ -16,7 +16,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: 8.0.x
 
     - name: Restore package
       run: nuget restore Xbim.Geometry.Engine.sln -NonInteractive
@@ -28,7 +28,7 @@ jobs:
       uses: microsoft/setup-msbuild@v1.1
 
     - name: Build app for release
-      run: msbuild Xbim.Geometry.Engine.sln /t:build /p:platform='Any CPU' /p:Configuration=Release
+      run: msbuild Xbim.Geometry.Engine.sln /t:build /p:platform='x64' /p:Configuration=Release
 
     - name: Move nugets to output
       run: mkdir ${{ env.PACKAGE_OUTPUT_DIRECTORY }}
