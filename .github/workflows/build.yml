@@ -1,6 +1,6 @@
 on:
   push:
-    branches: [ 'feature/netcore' ]
+    branches: [ 'feature/netcore', 'netcore3' ]
 
 env:
   PACKAGE_OUTPUT_DIRECTORY: ${{ github.workspace }}/output
