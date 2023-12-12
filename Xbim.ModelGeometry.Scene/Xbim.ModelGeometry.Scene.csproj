@@ -2,11 +2,12 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>net472;net6.0</TargetFrameworks>
-		<Title>Xbim ModelGeometry Scene</Title>
+		<Title>Poolarserver Xbim ModelGeometry Scene</Title>
 		<Description>Provides support for the Geometry Scene creation.</Description>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<EnableUnmanagedDebugging>true</EnableUnmanagedDebugging>
-    <NoWarn>CS1591</NoWarn>
+		<PackageId>Ps.Xbim.ModelGeometry.Scene</PackageId>
+		<NoWarn>CS1591</NoWarn>
 	</PropertyGroup>
 
 	

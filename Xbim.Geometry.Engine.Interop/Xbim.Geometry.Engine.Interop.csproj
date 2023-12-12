@@ -1,10 +1,10 @@
 ﻿<Project DefaultTargets="Build" Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFrameworks>net472;net6.0</TargetFrameworks>
-		<Title>Xbim Geometry Engine</Title>
+		<Title>Poolarserver Xbim Geometry Engine</Title>
 		<Description>Provides support for the Ifc4 and Ifc2x3 Geometry conversion.</Description>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<PackageId>Xbim.Geometry.Engine.Interop</PackageId>
+		<PackageId>Ps.Xbim.Geometry.Engine.Interop</PackageId>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -26,7 +26,7 @@
 				<WinPlatform>lib/$(TargetFramework)/win10-x86</WinPlatform>
 			</GeomEngine86>
 
-			<BuildTransitives Include="buildTransitive\$(TargetFramework)\Xbim.Geometry.Engine.Interop.targets">
+			<BuildTransitives Include="buildTransitive\$(TargetFramework)\Ps.Xbim.Geometry.Engine.Interop.targets">
 				<WinPlatform>buildTransitive/$(TargetFramework)</WinPlatform>
 			</BuildTransitives>
 
